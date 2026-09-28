@@ -1,0 +1,73 @@
+name: 🚀 Llançament d'un MVP
+description: Checklist estàndard de Kaidev per implementar i llançar el MVP d'una idea de projecte.
+title: "[MVP] <nom de la idea>"
+labels: ["mvp"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Template estàndard per llançar un MVP de Kaidev. Segueix els passos en ordre i marca cada casella quan estigui fet.
+  - type: markdown
+    attributes:
+      value: |
+        ## 📋 Checklist de llançament
+  - type: checkboxes
+    id: pasos
+    attributes:
+      label: Passos
+      options:
+        - label: "📝 **Descriure la idea del projecte**: què resol, per a qui, i com ho fa de diferent."
+        - label: "🎯 **Definir l'scope del MVP**: què SI entra en la primera versió (i què no), amb criteris de 'done'."
+        - label: "📦 **Crear el repositori i pujar el MVP implementat**: codi, README i instruccions de desplegament."
+        - label: "💳 **Vincular-hi Stripe si ha de tenir transaccions**: productes, preus, webhooks i test mode."
+        - label: "📊 **Connectar-hi Umami com a servei d'analítiques**: alta a la instància pròpia i script d'instal·lació al frontend."
+        - label: "🔗 **Publicar el post a LinkedIn** amb l'enllaç del projecte i el context."
+        - label: "👨‍👩‍👧 **Passar-ho a amics i familiars** com a primers usuaris reals."
+        - label: "🗒️ **Anotar el primer feedback**: què diuen, problemes trobats i idees per a la propera iteració."
+  - type: markdown
+    attributes:
+      value: |
+        ## 📝 Detall de la idea
+  - type: textarea
+    id: idea
+    attributes:
+      label: Idea del projecte
+      description: Què resol, per a qui, i per què és diferent.
+      placeholder: "Descritu aquí la idea..."
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope del MVP
+      description: Funcionalitats que entren en la primera versió i les que es deixen fora temporalment.
+      placeholder: "IN: ... / OUT: ..."
+      value: |
+        IN:
+        OUT:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🔗 Enllaços
+  - type: input
+    id: repo
+    attributes:
+      label: Repositori
+      description: Enllaç al repositori del MVP.
+      placeholder: "https://github.com/KaidevLabs/<repo>"
+  - type: input
+    id: url
+    attributes:
+      label: URL en producció
+      description: Enllaç al MVP desplegat (si és públic).
+      placeholder: "https://..."
+  - type: markdown
+    attributes:
+      value: |
+        ## 🗒️ Feedback
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Notes de primer feedback
+      description: Què han dit els primers usuaris (amics/familiars), problemes trobats i idees de millora.
+      placeholder: "Feedback i observacions..."
